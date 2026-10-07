@@ -160,9 +160,6 @@ script.md의 슬라이드 구성을 그대로 따라 한국어 발표 슬라이�
 4. 출처는 소스에 있는 공공기관·언론·리포트만 표기하고 유튜브 같은 비공식 출처는 인용하지 마.
 5. plan.md에 없는 수치는 만들지 마. 판결·법규는 소스 표현 그대로 쓰고 허용 근거로 확대 해석하지 마. 차트는 실제 수치 비율과 맞게 그려.
 EOF
-script.md의 슬라이드 구성을 그대로 따라 한국어 발표 슬라이드 10장을 만들어줘. 5분 발표용이라 장당 핵심 메시지 1개와 짧은 문장, 숫자 위주로 구성한다.
-plan.md의 단위경제·가격·전환율 수치는 반드시 '가정'이라고 표시하고, 출처가 있는 수치는 출처를 작게 표기해줘. 소스에 없는 수치는 만들지 마. 판결·법규는 소스 표현 그대로 쓰고 허용 근거로 확대 해석하지 마.
-EOF
   notebooklm generate slide-deck --prompt-file "$LOG/slide_prompt.txt" --format presenter --language ko --wait --timeout 900 --retry 2 -n "$NB" >> "$LOG/slides.log" 2>&1
   notebooklm download slide-deck "$OUT/slides.pdf" -n "$NB" --force >> "$LOG/slides.log" 2>&1
   notebooklm download slide-deck "$OUT/slides.pptx" --format pptx -n "$NB" --force >> "$LOG/slides.log" 2>&1
